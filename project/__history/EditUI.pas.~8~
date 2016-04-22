@@ -1,0 +1,104 @@
+unit EditUI;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var
+  carma: HWND;
+  inputArray: array[0..3] of TInput;
+begin
+  carma := FindWindow('CarmageddonClass', nil);
+
+  SetForegroundWindow(carma);
+
+  // this is weird but the following kinda enables
+  // the other keystrokes to be effective...
+  // it's like a dummy keystroke to set focus or smthg
+  Keybd_event(67,0,0,0);
+  Sleep(100);
+  Keybd_event(67,0,KEYEVENTF_KEYUP,0);
+
+  // so yeah the real deal starts now
+  Keybd_event(Ord('I'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('I'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('B'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('B'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('E'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('E'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('T'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('T'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('Y'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('Y'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('O'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('O'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('U'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('U'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('C'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('C'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('A'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('A'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('N'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('N'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('T'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('T'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('P'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('P'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('R'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('R'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('I'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('I'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('N'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('N'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('T'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('T'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('C'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('C'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('U'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('U'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('N'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('N'),0,KEYEVENTF_KEYUP,0);
+  Keybd_event(Ord('T'),0,0,0);
+  Sleep(100);
+  Keybd_event(Ord('T'),0,KEYEVENTF_KEYUP,0);
+ end;
+end.
