@@ -3,6 +3,7 @@ object Form1: TForm1
   Top = 151
   Width = 201
   Height = 168
+  BorderIcons = [biSystemMenu]
   Caption = 'EditUI'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
